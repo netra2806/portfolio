@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Netraa Ingale</title>
+  <meta name="description" content="Portfolio of Netraa Ingale featuring interactive scroll-driven storytelling, creative development, and modern digital experiences.">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✨</text></svg>">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;600&family=Outfit:wght@300;400;500;600;700;800;900&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="is-loading">
+
+  <!-- Preloader Screen -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <div class="preloader-avatar-ring">
+        <div class="ring-pulse"></div>
+        <div class="ring-core">
+          <span class="avatar-emoji">✨</span>
+        </div>
+      </div>
+      <h2 class="preloader-title">Netraa Ingale</h2>
+      <p class="preloader-status" id="preloader-status">Initializing visual experience...</p>
+      <div class="preloader-bar-wrap">
+        <div class="preloader-bar" id="preloader-bar"></div>
+      </div>
+      <div class="preloader-counter" id="preloader-counter">0%</div>
+    </div>
+  </div>
+
+  <!-- Ambient Cursor Glow Effect -->
+  <div class="cursor-glow" id="cursor-glow"></div>
+
+
+  <!-- Global Glass Navbar -->
+  <header class="site-header" id="site-header">
+    <div class="header-inner">
+      <a href="#hero-track" class="brand-logo" id="brand-logo">
+        <span class="logo-badge">NI</span>
+        <span class="logo-text">Netraa<span class="highlight">.portfolio</span></span>
+      </a>
+
+      <nav class="nav-links">
+        <a href="#about" class="nav-link" id="nav-about">About</a>
+        <a href="#projects" class="nav-link" id="nav-projects">Milestones</a>
+        <a href="#skills" class="nav-link" id="nav-skills">Skills</a>
+        <a href="#contact" class="nav-link" id="nav-contact">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <div class="status-pill">
+          <span class="status-dot"></span>
+          <span class="status-text">Available</span>
+        </div>
+        <a href="#contact" class="btn-header-cta" id="btn-header-cta">Let's Connect</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- ============================================== -->
+  <!-- HERO SCROLL ANIMATION TRACK (Sequential Scrub)  -->
+  <!-- ============================================== -->
+  <section class="hero-scroll-track" id="hero-track" aria-label="Interactive Hero Storyline">
+    <div class="hero-sticky-viewport" id="hero-sticky">
+
+      <!-- Dynamic Ambient Atmosphere Behind Canvas -->
+      <div class="hero-ambient-aura" id="hero-aura"></div>
+
+      <!-- Canvas for High-DPI Video-to-Frame Animation -->
+      <canvas id="hero-canvas" class="hero-canvas"></canvas>
+
+      <!-- Vignette Overlay for Seamless Cinematic Transition -->
+      <div class="hero-vignette" id="hero-vignette"></div>
+
+      <!-- Minimal Bottom Scroll Prompt (Non-intrusive) -->
+      <div class="hero-scroll-hint" id="hero-scroll-hint">
+        <span class="scroll-mouse-icon">
+          <span class="scroll-dot"></span>
+        </span>
+        <span class="scroll-hint-text">Scroll to animate</span>
+      </div>
+
+      <!-- Live Scrubbing HUD Indicator -->
+      <div class="hero-hud">
+        <div class="hud-progress-track">
+          <div class="hud-progress-fill" id="hud-progress-bar"></div>
+        </div>
+        <a href="#about" class="hud-skip-btn" id="hud-skip-btn">
+          <span>Skip to overview</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+            <path d="M12 5v14M19 12l-7 7-7-7"/>
+          </svg>
+        </a>
+      </div>
+
+    </div>
+  </section>
+
+
+  <!-- ============================================== -->
+  <!-- MAIN PORTFOLIO CONTENT (After Scroll Sequence)  -->
+  <!-- ============================================== -->
+  <main class="main-content" id="main-content">
+
+    <!-- Transition Portal Header -->
+    <section class="portal-welcome-section" id="overview">
+      <div class="container">
+        <div class="welcome-box">
+          <div class="welcome-pill">
+            <span class="pulse-icon"></span> Scroll Sequence Complete
+          </div>
+          <h2 class="welcome-title">
+            The Digital Portfolio of <span class="gradient-text">Netraa</span>
+          </h2>
+          <p class="welcome-lead">
+            Welcome to my portfolio! I’m an AI &amp; Data Science student passionate about building creative projects, exploring intelligent technologies, and turning ideas into practical digital experiences.
+          </p>
+          <div class="welcome-chips">
+            <span class="chip">💻 Web Development</span>
+            <span class="chip">🎨 Creative Design</span>
+            <span class="chip">🚀 Project Building</span>
+            <span class="chip">✨ Innovative Ideas</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="section about-section" id="about">
+      <div class="container">
+        <div class="section-badge">ABOUT ME</div>
+        <h2 class="section-title">
+          Creative Thinking <span class="gradient-text">Meets Technology</span>
+        </h2>
+        
+        <div class="about-grid">
+          <div class="about-card main-bio-card">
+            <h3 class="card-headline">Turning ideas into digital experiences</h3>
+            <p class="card-text">
+              I’m a third-year BTech student specializing in Artificial Intelligence and Data Science, with an interest in creative design, web development, and building practical projects. I enjoy exploring new ideas, learning new technologies, and creating digital experiences that are both visually appealing and easy to use.
+            </p>
+            <p class="card-text">
+              From designing interactive websites to developing small applications, I love experimenting, solving problems, and bringing my ideas to life through technology.
+            </p>
+            <div class="bio-actions">
+              <a href="#contact" class="btn-primary">Let's Connect</a>
+              <a href="#projects" class="btn-secondary">Explore Milestones</a>
+            </div>
+          </div>
+
+          <div class="about-stats-column">
+            <div class="stat-card">
+              <span class="stat-label stat-pillar-title">💻 Web Development</span>
+              <p class="stat-desc">Building creative and responsive websites.</p>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label stat-pillar-title">🎨 Creative Design</span>
+              <p class="stat-desc">Turning ideas into engaging visual experiences.</p>
+            </div>
+            <div class="stat-card">
+              <span class="stat-label stat-pillar-title">🚀 Project Development</span>
+              <p class="stat-desc">Learning by building practical, real-world projects.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Milestones & Projects Showcase -->
+    <section class="section projects-section" id="projects">
+      <div class="container">
+        <div class="section-header-flex">
+          <div>
+            <div class="section-badge">MILESTONES</div>
+            <h2 class="section-title">Projects &amp; <span class="gradient-text">Milestones</span></h2>
+          </div>
+          <p class="section-subtitle-right">
+            Selected works demonstrating interactive animations, frontend architecture, and design systems.
+          </p>
+        </div>
+
+        <!-- Project Cards Grid -->
+        <div class="projects-grid">
+          
+          <!-- Project 1 -->
+          <article class="project-card">
+            <div class="project-preview-wrap">
+              <div class="project-visual p-visual-1">
+                <div class="mockup-screen">
+                  <div class="mockup-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="mockup-hero-art">
+                      <span class="mock-badge">Scroll-Driven</span>
+                      <h4>Cinematic Hero Experience</h4>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tech-tag">Canvas 2D</span>
+                <span class="tech-tag">RAF Lerp</span>
+                <span class="tech-tag">CSS3</span>
+              </div>
+              <h3 class="project-title">Scroll-Driven Hero Narrative</h3>
+              <p class="project-desc">
+                High-performance sequential frame scrubbing with linear interpolation, responsive aspect ratio fitting, and preloaded asset caching.
+              </p>
+              <div class="project-links">
+                <a href="#hero-track" class="link-btn">
+                  <span>Replay Animation</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2 -->
+          <article class="project-card">
+            <div class="project-preview-wrap">
+              <div class="project-visual p-visual-2">
+                <div class="mockup-screen">
+                  <div class="mockup-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="mockup-dashboard">
+                      <div class="dash-bar" style="width: 70%"></div>
+                      <div class="dash-bar" style="width: 45%"></div>
+                      <div class="dash-bar" style="width: 90%"></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tech-tag">JavaScript</span>
+                <span class="tech-tag">REST API</span>
+                <span class="tech-tag">UI System</span>
+              </div>
+              <h3 class="project-title">Interactive Analytics Hub</h3>
+              <p class="project-desc">
+                A sleek dark-mode telemetry dashboard with live chart visualizations, customizable widget states, and lightning-fast load times.
+              </p>
+              <div class="project-links">
+                <a href="#contact" class="link-btn">
+                  <span>Inquire Details</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3 -->
+          <article class="project-card">
+            <div class="project-preview-wrap">
+              <div class="project-visual p-visual-3">
+                <div class="mockup-screen">
+                  <div class="mockup-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="mockup-ambient-cube"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tech-tag">WebGL</span>
+                <span class="tech-tag">GLSL Shaders</span>
+                <span class="tech-tag">Motion</span>
+              </div>
+              <h3 class="project-title">Spatial Experience Lab</h3>
+              <p class="project-desc">
+                Exploration of micro-physics, interactive particle fields, and sound-reactive ambient generative graphics.
+              </p>
+              <div class="project-links">
+                <a href="#contact" class="link-btn">
+                  <span>Explore Demo</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4 -->
+          <article class="project-card">
+            <div class="project-preview-wrap">
+              <div class="project-visual p-visual-4">
+                <div class="mockup-screen">
+                  <div class="mockup-header">
+                    <span class="dot red"></span><span class="dot yellow"></span><span class="dot green"></span>
+                  </div>
+                  <div class="mockup-body">
+                    <div class="mockup-tokens">
+                      <span class="t-token primary"></span>
+                      <span class="t-token secondary"></span>
+                      <span class="t-token accent"></span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="project-info">
+              <div class="project-tags">
+                <span class="tech-tag">Figma</span>
+                <span class="tech-tag">Design Tokens</span>
+                <span class="tech-tag">A11y</span>
+              </div>
+              <h3 class="project-title">Aura Modern Design System</h3>
+              <p class="project-desc">
+                Comprehensive component library and token architecture built for consistent, accessible cross-platform products.
+              </p>
+              <div class="project-links">
+                <a href="#contact" class="link-btn">
+                  <span>View Documentation</span>
+                  <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills & Tech Matrix -->
+    <section class="section skills-section" id="skills">
+      <div class="container">
+        <div class="section-badge">CAPABILITIES</div>
+        <h2 class="section-title">
+          Technical Skills & <span class="gradient-text">Core Competencies</span>
+        </h2>
+        <p class="section-subtitle">
+          Building a strong technical foundation through programming, creative problem-solving, and hands-on project development. Focused on applying concepts, exploring new tools, and continuously improving my development skills.
+        </p>
+
+        <!-- Highlighted Role Callout Banner -->
+        <div class="skills-highlight-callout">
+          <div class="callout-pill-badge">
+            <span class="callout-pulse-dot"></span>
+            <span>✦ Department Role</span>
+          </div>
+          <div class="callout-content">
+            <span class="callout-role-highlight">Active Core Member</span>
+            <span class="callout-bullet">&bull;</span>
+            <span class="gradient-text-ai">AI &amp; DS Department Committee</span>
+          </div>
+        </div>
+
+        <!-- Category Filter Tabs -->
+        <div class="skills-filter-tabs">
+          <button class="filter-btn active" data-category="all">All Skills</button>
+          <button class="filter-btn" data-category="programming">Programming</button>
+          <button class="filter-btn" data-category="web">Web Development</button>
+          <button class="filter-btn" data-category="creative">Creative Thinking</button>
+        </div>
+
+        <div class="skills-grid minimal-skills-grid" id="skills-grid">
+          
+          <div class="skill-card minimal-skill-card" data-category="programming">
+            <span class="skill-icon">🐍</span>
+            <h4 class="skill-name">Python</h4>
+          </div>
+
+          <div class="skill-card minimal-skill-card" data-category="programming">
+            <span class="skill-icon">⚙️</span>
+            <h4 class="skill-name">C Programming</h4>
+          </div>
+
+          <div class="skill-card minimal-skill-card" data-category="programming">
+            <span class="skill-icon">💻</span>
+            <h4 class="skill-name">C++</h4>
+          </div>
+
+          <div class="skill-card minimal-skill-card" data-category="programming">
+            <span class="skill-icon">☕</span>
+            <h4 class="skill-name">Java</h4>
+          </div>
+
+          <div class="skill-card minimal-skill-card" data-category="web">
+            <span class="skill-icon">🌐</span>
+            <h4 class="skill-name">HTML & CSS</h4>
+          </div>
+
+          <div class="skill-card minimal-skill-card" data-category="web programming">
+            <span class="skill-icon">⚡</span>
+            <h4 class="skill-name">JavaScript</h4>
+          </div>
+
+          <div class="skill-card minimal-skill-card" data-category="creative">
+            <span class="skill-icon">🎨</span>
+            <h4 class="skill-name">Creative UI & Design</h4>
+          </div>
+
+          <div class="skill-card minimal-skill-card" data-category="programming web creative">
+            <span class="skill-icon">🚀</span>
+            <h4 class="skill-name">Project Development</h4>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact & Connect Section -->
+    <section class="section contact-section" id="contact">
+      <div class="container">
+        <div class="contact-card">
+          <div class="contact-header">
+            <div class="section-badge">GET IN TOUCH</div>
+            <h2 class="contact-title">Let's Build Something <span class="gradient-text">Meaningful</span></h2>
+            <p class="contact-subtitle">
+              Have a project idea, collaboration opportunity, or just want to connect? I'd love to hear from you. I'm always open to learning, sharing ideas, and exploring new opportunities.
+            </p>
+          </div>
+
+          <div class="contact-grid">
+            
+            <!-- Quick Contact Channels -->
+            <div class="contact-info-col">
+              <div class="info-block">
+                <span class="info-label">Direct Email</span>
+                <div class="email-copy-wrap">
+                  <a href="mailto:netraaingale@gmail.com" class="email-text" id="email-address">netraaingale@gmail.com</a>
+                  <button class="btn-copy-email" id="btn-copy-email" title="Copy email address">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <rect x="9" y="9" width="13" height="13" rx="2" ry="2"></rect>
+                      <path d="M5 15H4a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h9a2 2 0 0 1 2 2v1"></path>
+                    </svg>
+                    <span id="copy-text">Copy</span>
+                  </button>
+                </div>
+              </div>
+
+              <div class="info-block">
+                <span class="info-label">Social & Code</span>
+                <div class="social-links-row">
+                  <a href="https://github.com/netra2806" target="_blank" rel="noopener noreferrer" class="social-chip">GitHub ↗</a>
+                  <a href="https://www.linkedin.com/in/netraaingale" target="_blank" rel="noopener noreferrer" class="social-chip">LinkedIn ↗</a>
+                  <a href="https://www.instagram.com/netraa.i?vrfl=dGpqbWhvNm92ZXQ4&amp;utm_source=qr" target="_blank" rel="noopener noreferrer" class="social-chip">Instagram ↗</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Interactive Message Form -->
+            <div class="contact-form-col">
+              <form class="contact-form" id="contact-form" action="https://formsubmit.co/netraaingale@gmail.com" method="POST">
+                <!-- FormSubmit Configuration -->
+                <input type="hidden" name="_captcha" value="false">
+                <input type="hidden" name="_template" value="table">
+                <input type="hidden" name="_subject" value="New Portfolio Message via Netraa.portfolio">
+
+                <div class="form-group">
+                  <label for="form-name">Your Name</label>
+                  <input type="text" id="form-name" name="name" placeholder="What's your name?" required>
+                </div>
+                <div class="form-group">
+                  <label for="form-email">Your Email</label>
+                  <input type="email" id="form-email" name="email" placeholder="Where can I reach you back?" required>
+                </div>
+                <div class="form-group">
+                  <label for="form-message">Your Message or Project Idea</label>
+                  <textarea id="form-message" name="message" rows="4" placeholder="Tell me about what you'd like to build together..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit" id="btn-submit">
+                  <span>Send Message →</span>
+                </button>
+                <div class="form-toast" id="form-toast"></div>
+              </form>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Global Footer -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-left">
+        <span class="footer-logo">Netraa Ingale</span>
+      </div>
+      <div class="footer-right">
+        <a href="#hero-track" class="btn-back-top" id="btn-back-top">
+          <span>Back to Top</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 19V5M5 12l7-7 7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Notification Toast Container -->
+  <div class="toast-popup" id="toast-popup"></div>
+
+  <script src="app.js"></script>
+</body>
+</html>
